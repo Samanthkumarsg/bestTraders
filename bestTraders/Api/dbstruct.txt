@@ -1,0 +1,11 @@
+user_login -> mobile_no,user_password,otp_dig,otp_expiredate,full_name,email_id,user_location_x,user_location_y,user_status
+
+root_cat -> root_cat_id,product_name, cost, quantity,image_url,status,hasChildElement,rating
+subroot_cat -> subroot_cat_id,root_cat_id,product_name, cost, quantity,image_url,status,hasChildElement,rating
+child_cat -> child_cat_id,subroot_cat_id,product_name, cost, quantity,image_url,status,hasChildElement,rating
+
+
+user_address -> auto_id,mobile_no,address,landmark,city,location_x,location_y,pincode
+
+
+your_orders -> auto_id,mobile_no,product_name, cost, quantity,image_url,status,childElement,cat_id,user_adress_id,order_status,isPaid,amountPaidStatus

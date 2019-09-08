@@ -1,0 +1,4 @@
+0 - order pending 
+1 - acceptet
+2 - out for delivery
+3 - delivered
