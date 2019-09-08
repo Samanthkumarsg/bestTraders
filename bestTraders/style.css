@@ -1,8 +1,8 @@
 :root{
-    --bg:#f3f3f3;
+    --bg:#ebebeb;
     --primary:dodgerblue;
     --secondary:#444;
-    --third:#666;
+    --third:#777;
 }
 
 body{
@@ -12,28 +12,30 @@ body{
 }
 
 .container{
-    height: 50vh;
-    width: 60%;
-    margin: 100px auto;
-    border-radius: 4px;
+    height: 90vh;
+    width: 80%;
+    margin:2% auto;
+    border-radius: 8px;
     background: #fff;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-items: center;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
 }
 
 .container h1{
     color:var(--primary);
-    font:3em segoe ui light;
+    font:bold 4em segoe ui light;
 }
 
 .container h2{
     color:var(--secondary);
-    font:1em segoe ui light;
+    font:bold 5em segoe ui light;
 }
 
 .container h3{
     color:var(--third);
-    font:1em segoe ui light;
+    font:2em segoe ui light;
+
 }

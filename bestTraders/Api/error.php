@@ -9,9 +9,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Error Page!</h1>
+        <h1>Error Page !</h1>
         <h2>
-            702
+            <?php 
+                $ErrorCode = $_GET['error_code'];
+                echo $ErrorCode;
+            ?>
         </h2>
         <h3>Oops! please try again.</h3>
     </div>

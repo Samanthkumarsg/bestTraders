@@ -83,6 +83,7 @@ if($id == 2){
         $output = $login->loginToApp(getRequestData("mobile_no"),getRequestData("user_password"));
         if($output == "-1"){
             echo "702";
+            header("location: error.php?&error_code=702");
         }else {
             echo "$output";
         }
@@ -91,6 +92,7 @@ if($id == 2){
         $output = $login->loginToAppWithMobile(getRequestData("mobile_no"));
         if($output == "-1"){
             echo "702";
+            header("location: error.php?&error_code=702");
         }else {
             echo "$output";
         }
@@ -106,8 +108,10 @@ if($id == 3){
         $output = $login->verifyOtp(getRequestData("mobile_no"),getRequestData("otp"));
         if($output == "1"){
             echo "701";
+            header("location: error.php?&error_code=701");
         }else {
             echo "702";
+            header("location: error.php?&error_code=702");
         }
     }else {
         echo "801";
@@ -121,8 +125,10 @@ if($id == 4){
         $output = $login->updateUserInfo(getRequestData("mobile_no"),getRequestData("user_password"),getRequestData("full_name"),getRequestData("email_id"));
         if($output == "1"){
             echo "701";
+            header("location: error.php?&error_code=701");
         }else {
             echo "702";
+            header("location: error.php?&error_code=702");
         }
     }else {
         echo "801";
@@ -134,8 +140,10 @@ if($id == 5){
         $output = $login->updateLocationInfo(getRequestData("mobile_no"),getRequestData("x_cord"),getRequestData("y_cord"),getRequestData("user_password"));
         if($output == "1"){
             echo "701";
+            header("location: error.php?&error_code=701");
         }else {
             echo "702";
+            header("location: error.php?&error_code=702");
         }
     }else {
         echo "801";
@@ -148,6 +156,7 @@ if($id == 6){
         $output = $traders->getRootCategory(getRequestData("product_name"),getRequestData("min_cost"),getRequestData("max_cost"),getRequestData("status"),getRequestData("root_cat_id"));
         if($output == "0"){
             echo "702";
+            header("location: error.php?&error_code=702");
         }else {
             echo $output;
         }
@@ -162,6 +171,7 @@ if($id == 7){
         $output = $traders->getSubRootCategory(getRequestData("product_name"),getRequestData("min_cost"),getRequestData("max_cost"),getRequestData("status"),getRequestData("root_cat_id"),getRequestData("subroot_cat_id"));
         if($output == "0"){
             echo "702";
+            header("location: error.php?&error_code=702");
         }else {
             echo $output;
         }
@@ -176,6 +186,7 @@ if($id == 8){
         $output = $traders->getChildCategory(getRequestData("product_name"),getRequestData("min_cost"),getRequestData("max_cost"),getRequestData("status"),getRequestData("subroot_cat_id"),getRequestData("child_cat_id"));
         if($output == "0"){
             echo "702";
+            header("location: error.php?&error_code=702");
         }else {
             echo $output;
         }
@@ -191,6 +202,7 @@ if($id == 9){
         $output = $traders->getUserAddress(getRequestData("auto_id"),getRequestData("mobile_no"),getRequestData("address"),getRequestData("landmark"),getRequestData("city"),getRequestData("location_x"),getRequestData("location_y"),getRequestData("pincode"));
         if($output == "0"){
             echo "702 ";
+            header("location: error.php?&error_code=702");
         }else {
             echo $output;
         }
@@ -204,7 +216,7 @@ if($id == 10){
         $output = $traders->putUserAddress(getRequestData("mobile_no"),getRequestData("address"),getRequestData("landmark"),getRequestData("city"),getRequestData("location_x"),getRequestData("location_y"),getRequestData("pincode"));
         if($output == "0"){
             echo "702 ";
-            header("location: error.html");
+            header("location: error.php?&error_code=702");
         }else {
             echo $output;
         }
@@ -219,7 +231,7 @@ if($id == 11){
         $output = $traders->putYourOrders(getRequestData("mobile_no"),getRequestData("product_name"),getRequestData("cost"),getRequestData("quantity"),getRequestData("image_url"),getRequestData("status"),getRequestData("childElement"),getRequestData("cat_id"),getRequestData("user_address_id"),getRequestData("order_status"),getRequestData("isPaid"),getRequestData("amountPaidStatus"));
         if($output == "0"){
             echo "702 ";
-            header("location: error.html");
+            header("location: error.php?&error_code=702");
         }else {
             echo $output;
         }
