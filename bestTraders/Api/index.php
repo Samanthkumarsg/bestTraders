@@ -204,6 +204,7 @@ if($id == 10){
         $output = $traders->putUserAddress(getRequestData("mobile_no"),getRequestData("address"),getRequestData("landmark"),getRequestData("city"),getRequestData("location_x"),getRequestData("location_y"),getRequestData("pincode"));
         if($output == "0"){
             echo "702 ";
+            header("location: error.html");
         }else {
             echo $output;
         }
@@ -218,6 +219,7 @@ if($id == 11){
         $output = $traders->putYourOrders(getRequestData("mobile_no"),getRequestData("product_name"),getRequestData("cost"),getRequestData("quantity"),getRequestData("image_url"),getRequestData("status"),getRequestData("childElement"),getRequestData("cat_id"),getRequestData("user_address_id"),getRequestData("order_status"),getRequestData("isPaid"),getRequestData("amountPaidStatus"));
         if($output == "0"){
             echo "702 ";
+            header("location: error.html");
         }else {
             echo $output;
         }
