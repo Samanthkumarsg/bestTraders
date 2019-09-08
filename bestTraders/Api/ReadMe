@@ -1,0 +1,2 @@
+change -> columnName (mobile_no) from table : users_address and your_orders 
+when you insert values for mobile no the current user mobile_no gets updates while inserting via url 
